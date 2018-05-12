@@ -19,14 +19,23 @@ body {
   background: #fff;
 }
 
+.search-bar form {
+  background: rgba(255,0,0,0.25);
+  position: relative;
+  width: 100%;
+}
+
 .search-bar .form-control {
   border-radius: 2px;
+  outline: none;
   width: 80%
 }
 .search-bar .btn {
   border-radius: 2px;
   border-color: #d3d3d3;
   background: #f8f8f8;
+  outline: none;
+  position: absolute; top: 0; right: 0;
   width: 20%;
   margin-left: -1px;
 }

@@ -21,7 +21,6 @@ angular.module('video-player')
       }.bind(this);
 
       this.youTubeData = function(query, callback) {
-        query = 'David Bowie';
         youTube.getVideos(query, this.searchResults);
       }.bind(this);
 
