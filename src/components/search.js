@@ -5,6 +5,7 @@ angular.module('video-player')
       this.query = '';
     },
     bindings: {
-      search: '<'
+      search: '<',
+      autoplay: '='
     }
   });

@@ -8,7 +8,8 @@ angular.module('video-player')
     },
     bindings: {
       videos: '<',
-      currentVideo: '<'
+      currentVideo: '<',
+      autoplay: '<'
     },
     
   });

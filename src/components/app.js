@@ -8,8 +8,10 @@ angular.module('video-player')
 
       this.currentVideo = this.videos ? this.videos[0] : null;
       
+      this.autoplay = 0;
+
       this.$onInit = function() {
-        youTube.getVideos('David Bowie', this.searchResults);
+        youTube.getVideos('Childish Gambino', this.searchResults);
       };      
 
       this.selectVideo = function() {
@@ -20,7 +22,7 @@ angular.module('video-player')
         this.currentVideo = this.videos[0];
       }.bind(this);
 
-      this.youTubeData = function(query, callback) {
+      this.youTubeData = function(query, autoplay) {
         youTube.getVideos(query, this.searchResults);
       }.bind(this);
 
@@ -30,5 +32,3 @@ angular.module('video-player')
 
     },
   });
-  
-// ng-if="$ctrl.videos"

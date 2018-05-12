@@ -46,6 +46,38 @@ body {
   box-shadow: 0 1px 0 rgba(0,0,0,0.10);
 }
 
+.search-bar #autoplay-component {
+  margin: 4px 0;
+  text-align: right;
+  width: 100%;
+}
+
+.search-bar #autoplay,
+.search-bar #autoplay-label {
+  display: inline-block;
+  line-height: 1.4;
+  margin: 0;
+  vertical-align: top;
+}
+
+.search-bar #autoplay {
+  display: none;
+}
+
+.search-bar #autoplay-label {
+  background-color: #ededed;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  text-align: center;
+  width: 20%;
+}
+
+.search-bar #autoplay:checked ~ label {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
 .video-player {
   margin-left: 20px;
   margin-right: 20px;
