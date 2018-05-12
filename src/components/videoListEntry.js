@@ -4,6 +4,7 @@ angular.module('video-player')
     controller: function() {
     },
     bindings: {
-      video: '<'
+      video: '<',
+      click: '<'
     },
   });

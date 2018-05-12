@@ -5,7 +5,8 @@ angular.module('video-player')
 
     },
     bindings: {
-      videos: '<'
+      videos: '<',
+      click: '<'
     },
   });
 
