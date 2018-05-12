@@ -3,20 +3,23 @@ angular.module('video-player')
     templateUrl: 'src/templates/app.html',
     controller: function(youTube) {
       
-      this.youTubeData = youTube.getVideos('David Bowie');
+      this.videos = null;
+      // this.videos = exampleVideoData;
 
-      // this.videos = this.youTubeData.data.items;
-      this.videos = exampleVideoData;
-
-      this.currentVideo = this.videos[0];
+      this.currentVideo = this.videos ? this.videos[0] : null;
       
-      this.searchResults = function() {
-        return;
+      this.searchResults = function(response) {
+        console.log('Search Response', response.data.items);
+        this.videos = response.data.items;
       };
 
       this.selectVideo = function() {
-        return;
       };
+
+      this.youTubeData = function(query, callback) {
+        query = 'David Bowie';
+        youTube.getVideos(query, this.searchResults);
+      }.bind(this);
 
       this.onClick = function(video) {
         this.currentVideo = video;        

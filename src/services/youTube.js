@@ -15,6 +15,7 @@ angular.module('video-player')
       })
         .then(
           function successCallback(response) {
+            callback(response);
             console.log('Success!', response);
             console.log(response.data.items);
           },
