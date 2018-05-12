@@ -1,9 +1,16 @@
 angular.module('video-player')
   .component('app', {
     templateUrl: 'src/templates/app.html',
-    controller: function() {
+    controller: function(youTube) {
+      
+
+      this.youTubeData = youTube.getVideos('David Bowie');
+
       this.videos = exampleVideoData;
-      this.currentVideo = exampleVideoData[0];
+
+      // this.videos = this.youTubeData.data.items;
+
+      this.currentVideo = this.videos[0];
       
       this.searchResults = function() {
         return;
@@ -12,7 +19,8 @@ angular.module('video-player')
         return;
       };
       this.onClick = function(video) {
-        this.currentVideo = video;
+        this.currentVideo = video;        
       }.bind(this);
+
     },
   });
